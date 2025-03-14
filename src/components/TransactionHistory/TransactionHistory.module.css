@@ -1,0 +1,27 @@
+.container {
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid black;
+    max-width: 500px;
+    font-size: 15px;
+}
+
+.table {
+    width: 100%;
+}
+
+thead {
+    color: aliceblue;
+    background-color: rgb(27, 22, 22);
+}
+
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: gray;
+}
