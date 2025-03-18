@@ -1,17 +1,17 @@
-import stylesFriends from "./FriendList.module.css";
-
+import FriendListItem from "../FriendListItem/FriendListItem";
+import styles from "../FriendList/FriendList.module.css";
+import { nanoid } from "nanoid";
 export default function FriendList({ friends }) {
     return (
-        <div className={stylesFriends.container}>
-            {friends.map(({ id, avatar, name, isOnline }) => (
-                <div key={id} className={stylesFriends.friendItem}>
-                    <img src={avatar} alt={name} width="48" />
-                    <p>{name}</p>
-                    <p className={isOnline ? stylesFriends.online : stylesFriends.offline}>
-                        {isOnline ? "Online" : "Offline"}
-                    </p>
-                </div>
-            ))}
+        <div >
+            <ul className={styles.container}>
+                {friends.map(({ id, avatar, name, isOnline }) => (
+                    <li key={nanoid()}>
+                        <FriendListItem id={id} avatar={avatar} name={name} isOnline={isOnline} />
+                    </li>
+
+                ))}
+            </ul>
         </div>
     );
 }
